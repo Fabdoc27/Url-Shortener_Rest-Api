@@ -7,8 +7,14 @@ use App\Http\Requests\Auth\RegisterUserRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * @tags Authentication
+ */
 class RegisterUserController extends Controller
 {
+    /**
+     * Register User
+     */
     public function __invoke(RegisterUserRequest $request): JsonResponse
     {
         $user = User::create($request->validated());

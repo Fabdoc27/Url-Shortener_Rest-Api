@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\Api\V2;
 
 use App\Http\Controllers\Controller;
 use App\Models\Url;
@@ -11,11 +11,13 @@ use App\Models\Url;
 class RedirectUrlController extends Controller
 {
     /**
-     *  Redirect Url
+     *  Redirect Url v2
      */
     public function __invoke(string $url)
     {
         $redirection = Url::where('short_url', $url)->firstOrFail();
+
+        $redirection->increment('views');
 
         return redirect()->away($redirection->long_url);
     }

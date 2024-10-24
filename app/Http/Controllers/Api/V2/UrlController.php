@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\Api\V2;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUrlRequest;
-use App\Http\Resources\V1\UrlCollection;
+use App\Http\Resources\V2\UrlCollection;
 use App\Models\Url;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 class UrlController extends Controller
 {
     /**
-     *  List of urls
+     *  List of urls v2
      */
     public function index(Request $request)
     {
@@ -23,7 +23,7 @@ class UrlController extends Controller
     }
 
     /**
-     *  Create a url
+     *  Create a url v2
      */
     public function store(StoreUrlRequest $request)
     {
@@ -54,7 +54,7 @@ class UrlController extends Controller
     }
 
     /**
-     *  Delete a url
+     *  Delete a url v2
      */
     public function destroy(Url $url)
     {

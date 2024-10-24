@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\V1\RedirectUrlController;
-use Illuminate\Support\Facades\Route;
+use Dedoc\Scramble\Scramble;
 
-Route::get('/{url}', RedirectUrlController::class);
+Scramble::registerUiRoute(path: 'docs/v1', api: 'v1');
+Scramble::registerUiRoute(path: 'docs/v2', api: 'v2');
+Scramble::registerJsonSpecificationRoute(path: 'docs/v1.json', api: 'v1');
+Scramble::registerJsonSpecificationRoute(path: 'docs/v2.json', api: 'v2');

@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\V1\RedirectUrlController;
-use App\Http\Controllers\Api\V1\UrlController;
+use App\Http\Controllers\Api\V2\RedirectUrlController;
+use App\Http\Controllers\Api\V2\UrlController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->group(function () {

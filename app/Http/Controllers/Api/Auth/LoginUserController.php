@@ -6,8 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginUserRequest;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * @tags Authentication
+ */
 class LoginUserController extends Controller
 {
+    /**
+     * Authenticate User
+     */
     public function __invoke(LoginUserRequest $request): JsonResponse
     {
         $credentials = $request->validated();
