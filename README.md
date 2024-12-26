@@ -35,7 +35,7 @@ Follow these instructions to set up the project.
 1. **Clone the repository:**
 
     ```shell
-    git clone "git@github.com:ashrafulbinharun/Url-Shortener_Rest-Api.git"
+    git clone "git@github.com:Fabdoc27/Url-Shortener_Rest-Api.git"
     ```
 
 2. **Navigate to the project directory:**
